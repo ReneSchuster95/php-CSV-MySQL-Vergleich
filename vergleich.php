@@ -73,7 +73,7 @@ if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
                         <th>ID</th>
                         <th>Bezeichnung</th>
                     </tr>
-                    <?php foreach ($new as $id => $bezeichnung): ?>
+                    <?php foreach ($new as $id => $bezeichnung) { ?>
                         <tr>
                             <td>
                                 <input type="checkbox" name="selected[<?= htmlspecialchars($id) ?>]"
@@ -82,7 +82,7 @@ if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
                             <td><?= htmlspecialchars($id) ?></td>
                             <td><?= htmlspecialchars($bezeichnung) ?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php }; ?>
                 </table>
                 <?php if (count($new) > 0) { ?>
                     <input type="hidden" name="data" value="<?php echo base64_encode(serialize($new)); ?>">
@@ -108,7 +108,7 @@ if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
                         <th>ID</th>
                         <th>Neue Bezeichnung</th>
                     </tr>
-                    <?php foreach ($change as $id => $bezeichnung): ?>
+                    <?php foreach ($change as $id => $bezeichnung) { ?>
                         <tr>
                             <td>
                                 <input type="checkbox" name="selected[<?= htmlspecialchars($id) ?>]"
@@ -117,7 +117,7 @@ if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
                             <td><?= htmlspecialchars($id) ?></td>
                             <td><?= htmlspecialchars($bezeichnung) ?></td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php }; ?>
                 </table>
                 <?php if (count($change) > 0) { ?>
                     <input type="hidden" name="data" value="<?php echo base64_encode(serialize($change)); ?>">

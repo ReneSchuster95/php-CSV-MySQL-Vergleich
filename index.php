@@ -39,12 +39,12 @@ while ($a = $stmt->fetch_object()) {
             <th>ID</th>
             <th>Bezeichnung</th>
         </tr>
-        <?php foreach ($artikel as $id => $bezeichnung): ?>
+        <?php foreach ($artikel as $id => $bezeichnung) { ?>
             <tr>
                 <td><?= htmlspecialchars($id) ?></td>
                 <td><?= htmlspecialchars($bezeichnung) ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php }; ?>
     </table>
 
     <form action="download.php" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
