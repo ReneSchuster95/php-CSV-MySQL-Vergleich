@@ -89,6 +89,14 @@ if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
                     <input type="submit" value="Ausgewählte speichern" />
                 <?php } ?>
             </form>
+            <!-- Download CSV -->
+            <?php if (count($new) > 0) { ?>
+                <form method="post" action="download.php" style="margin-top: 10px;">
+                    <input type="hidden" name="filename" value="Geaenderte_Eintraege.csv">
+                    <input type="hidden" name="data" value="<?php echo base64_encode(serialize($new)); ?>">
+                    <button type="submit">CSV herunterladen</button>
+                </form>
+            <?php } ?>
         </div>
 
         <div class="table-box">
@@ -116,6 +124,14 @@ if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
                     <input type="submit" value="Ausgewählte speichern" />
                 <?php } ?>
             </form>
+            <!-- Download CSV -->
+            <?php if (count($change) > 0) { ?>
+                <form method="post" action="download.php" style="margin-top: 10px;">
+                    <input type="hidden" name="filename" value="Geaenderte_Eintraege.csv">
+                    <input type="hidden" name="data" value="<?php echo base64_encode(serialize($change)); ?>">
+                    <button type="submit">CSV herunterladen</button>
+                </form>
+            <?php } ?>
         </div>
     </div>
 
