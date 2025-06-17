@@ -27,18 +27,18 @@ ID;Bezeichnung
 
 Importiere `db.sql` in deine MySQL-Datenbank:
 
-mysql -u [benutzer] -p [datenbankname] < db.sql
+    mysql -u [benutzer] -p [datenbankname] < db.sql
 
-    Datenbankverbindung konfigurieren
+Datenbankverbindung konfigurieren
 
 Bearbeite die Datei db.php und passe die Zugangsdaten an:
 
-$db = new mysqli("localhost", "user", "password", "datenbankname");
+    $db = new mysqli("localhost", "user", "password", "datenbankname");
 
 ## Voraussetzungen
 
-    PHP 7+
+PHP 7+
 
-    MySQL
+MySQL
 
-    Webserver (Apache, Nginx, XAMPP etc.)
+Webserver (Apache, Nginx, XAMPP etc.)
